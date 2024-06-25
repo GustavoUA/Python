@@ -1,0 +1,17 @@
+#vamos a instalar primero esta libreria 
+pip install pyttsx3
+
+#posteriormente debemos de crear un archivo con extension PY con este codigo
+#importamos la libreria 
+import pyttsx3
+
+#creamos una funcion donde le pasamos un parámetro
+def voz(texto):
+
+#inicializamos y creamos un objeto de esta libreria, y le pasamos el texto escrito por teclado
+    objvoz = pyttsx3.init()
+    objvoz.say(texto)
+    objvoz.runAndWait()
+
+texto = input("introduce un texto: ")
+voz(texto)
